@@ -66,11 +66,18 @@ input#SearchString {
 }
 
 body.rarebg {
-	background-image: url("/content/mainbg.jpg");
+	background-image: url("/images/mainbg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-div#rarecontainer {  
+.semi-transparent{
+    background-color: rgba(26, 26, 26, 0.5);
+}
+
+.panel-info > .panel-heading {
+    color: #eacf4c;
+    background-color: rgba(51, 51, 51, 0.33);
+    border-color: #212121;
 }
