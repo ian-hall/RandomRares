@@ -1,7 +1,7 @@
 ﻿$(function () {
     var body = $('body');
-    var backgrounds = ['url(/images/bg1.jpg)', 'url(/images/bg2.jpg)', 'url(/images/bg3.jpg)',
-                       'url(/images/bg4.jpg)', 'url(/images/bg5.jpg)'];
+    var backgrounds = ['url(../RandomRares/images/bg1.jpg)', 'url(../RandomRares/images/bg2.jpg)', 'url(../RandomRares/images/bg3.jpg)',
+                       'url(../RandomRares/images/bg4.jpg)', 'url(../RandomRares/images/bg5.jpg)'];
     var wait = 10000
     function chooseElement(list) {
         i = Math.floor(Math.random() * list.length);
