@@ -4,8 +4,8 @@
 }
 
 body {
-    padding-top: 70px;
-    padding-bottom: 155px;
+    padding-top: 65px;
+    padding-bottom: 160px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -39,16 +39,8 @@ textarea {
 
 .above-footer {
   position: absolute;
-  bottom: 51px;
-  /*width: 100%;
-  height: 50px;
-  background-color: #1a1a1a;*/
+  bottom: 55px;
 }
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
 .footer > .container {
   padding-right: 15px;
@@ -74,10 +66,10 @@ input#SearchString {
 }
 
 body.rarebg {
-	background-image: url("../images/bg1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+    transition: background 2.00s ease-in-out;
 }
 
 .semi-transparent{
@@ -91,7 +83,11 @@ body.rarebg {
 
 .brand-image{
     width:auto;
-    height:inherit;
+    height:35px;
+}
+
+.station-name{
+    color: ivory;
 }
 
 .panel-info > .panel-heading {
