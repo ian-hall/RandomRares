@@ -69,7 +69,9 @@ body.rarebg {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-    transition: background 2.00s ease-in-out;
+    -moz-transition: background-image 1.5s linear;
+    -webkit-transition: background-image 1.5s linear;
+    transition: background-image 1.5s linear;
 }
 
 .semi-transparent{
