@@ -1,7 +1,7 @@
 ﻿$(function () {
-    var body = $('body');
-    var backgrounds = ['url(../RandomRares/images/bg1.jpg)', 'url(../RandomRares/images/bg2.jpg)', 'url(../RandomRares/images/bg3.jpg)',
-                       'url(../RandomRares/images/bg4.jpg)', 'url(../RandomRares/images/bg5.jpg)'];
+    var body = $('body.rarebg');
+    var backgrounds = ['http://www.imhall.com/RandomRares/images/bg1.jpg', 'http://www.imhall.com/RandomRares/images/bg2.jpg', 'http://www.imhall.com/RandomRares/images/bg3.jpg',
+                       'http://www.imhall.com/RandomRares/images/bg4.jpg', 'http://www.imhall.com/RandomRares/images/bg5.jpg'];
     var wait = 10000
     function chooseElement(list) {
         i = Math.floor(Math.random() * list.length);
@@ -9,13 +9,19 @@
     }
 
     function nextBackground() {
-        body.css(
-         'background-image',
-          chooseElement(backgrounds)
-       );
-
+        var tempImage = new Image();
+        var bgUrl = chooseElement(backgrounds);
+        tempImage.src = bgUrl;
+        tempImage.onload=function () {
+            body.css(
+             'background-image',
+              'url(' + bgUrl + ')'
+           );
+        }
         setTimeout(nextBackground, wait);
     }
+
+    var bgUrl = chooseElement(backgrounds);
     setTimeout(nextBackground, wait);
-    body.css('background-image', chooseElement(backgrounds));
+    body.css('background-image', 'url(' + bgUrl + ')');
 });
