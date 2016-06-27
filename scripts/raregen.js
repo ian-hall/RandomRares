@@ -29,7 +29,7 @@ var itemPlaces = ["Tauri", "Aepyornis", "Ceti", "Chateau", "De Aegaeon", "Edan",
                    "HIP", "Burnham", "Holva", "HR 7221", "Irukama", "Jaradharre", "Jaroua", "Jotun", "Kachirigin", "Kamitra", "Kamorin",
                    "Karetii", "Karsuki", "Kinago", "Kongga", "Koro", "Kung", "Lavian", "Leestian", "Mechucos", "Medb", "Mokojing", "Momus",
                    "Mukusubii", "Mulachi", "Neritus", "Ngandandari", "Nguna", "Soontill", "Njangari", "Ochoeng", "Orrerian", "Verrix",
-                   "Quechua", "Rajukru", "Multi-Stoves", "Rapa", "Bao", "Rusani", "Sanuma", "Shintara", "Tanmark", "Tarach", "Terra", "Mater",
+                   "Quechua", "Rajukru", "Rapa", "Bao", "Rusani", "Sanuma", "Shintara", "Tanmark", "Tarach", "Terra", "Mater",
                    "Thrutis", "Tiolce", "Toxandji", "Uszaian", "Utgaroar", "Uzumoku", "V Herculis", "Vanayequi", "Vega", "Vidavantian",
                    "Volkhab", "Wheemete", "Witchhaul", "Wulpa", "Wuthielo", "Ku", "Xihe", "Yaso", "Kondi", "Zeessze", "Yaupon"];
 
@@ -56,6 +56,11 @@ function chooseElement(list) {
     return list[i];
 }
 
+/*
+ * Generates the name of a space station
+ * 80% of stations have the form stationProper + (stationOther/stationType)
+ * __% of stations have the form stationType + stationProper
+ */
 function generateStation() {
     var station = "";
     if (Math.random() < 0.80) {
@@ -71,15 +76,27 @@ function generateStation() {
     return station.toUpperCase();
 }
 
+/*
+ * Generates an fake rare good name.
+ * 20% chance to add an itemPrefix to the name
+ * 80% of items have the form itemPlace + (35%)itemAdjectives + itemKind
+ * __% of items have the form itemAdjective + itemKind
+ */
 function generateItem() {
     var item = "Specializing in ";
     if (Math.random() < 0.20) {
         item += chooseElement(itemPrefs);
         item += " ";
     }
-    item += chooseElement(itemPlaces);
-    item += " ";
-    if (Math.random() < 0.35) {
+    if (Math.random() < 0.80) {
+        item += chooseElement(itemPlaces);
+        item += " ";
+        if (Math.random() < 0.35) {
+            item += chooseElement(itemAdjectives);
+            item += " ";
+        }
+    }
+    else {
         item += chooseElement(itemAdjectives);
         item += " ";
     }
