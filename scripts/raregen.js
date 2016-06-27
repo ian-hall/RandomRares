@@ -20,28 +20,36 @@ var stationType = ["Station", "Hub", "Gateway", "Estate", "Vista", "Ring", "Dock
 var stationOther = ["Legacy", "Orbital", "Solo", "Orbiter", "Trading", "Enterprise", "Icelock", "Vision", "West", "Toll", "Horizons",
                     "Free", "Crown", "Tranquillity", "Guest"];
 
-var items = ["Tauri", "Chimes", "Aepyornis", "Egg", "Ceti", "Rabbits", "Chateau", "De", "Aegaeon", "Edan", "Apples", "of Aerial", "Aganippe",
-                  "Rush", "Alacarakmo", "Skin", "Art", "Centauri", "Mega", "Gin", "Altairian", "Skin", "Alya", "Body", "Soup", "Anduliga", "Fire", "Works",
-                  "Any", "Na", "Coffee", "Arouca", "Conventula", "Sweets", "Az", "Cancri", "Formula", "42", "Baltha'sine", "Vacuum", "Krill", "Banki",
-                  "Amphibious", "Leather", "Bast", "Snake", "Gin", "Belalans", "Ray", "Leather", "CD-75", "Kitten", "Brand", "Coffee", "Cherbones", "Blood",
-                  "Crystals", "Chi", "Eridani", "Marine", "Paste", "Coquim", "Spongiform", "Victuals", "Damna", "Carapaces", "Motrona", "Experience", "Jelly",
-                  "Delta", "Phoenicis", "Palms", "Deuringas", "Truffles", "Diso", "Ma", "Corn", "Eleu", "Thermals", "Indi", "Bourbon", "Eranin", "Whiskey",
-                  "Eshu", "Umbrellas", "Esuseku", "Caviar", "Ethgreze", "Tea", "Buds", "Fujin", "Tea", "Geawen", "Dance", "Dust", "Pantaa", "Prayer", "Sticks",
-                  "Gerasian", "Gueuze", "Beer", "Goman", "Yaupon", "Coffee", "Haidne", "Black", "Brew", "Havasupai", "Dream", "Catcher", "Live", "Hecate",
-                  "Sea", "Worms", "Ceremonial", "Heike", "Tea", "Helvetitj", "Pearls", "HIP", "10175", "Bush", "Meat", "HIP", "Proto-Squid", "Burnham", "Bile",
-                  "Distillate", "HIP", "Organophospates", "Holva", "Duelling", "Blades", "HR", "7221", "Wheat", "Giant", "Irukama", "Snails", "Jaradharre",
-                  "Puzzle", "Box", "Jaroua", "Rice", "Jotun", "Mookah", "Kachirigin", "Filter", "Leeches", "Kamitra", "Cigars", "Kamorin", "Historic", "Weapons",
-                  "Onion", "Head", "Karetii", "Couture", "Karsuki", "Locusts", "Kinago", "Violins", "Kongga", "Ale", "Koro", "Kung", "Pellets", "Lavian",
-                  "Brandy", "Chameleon", "Cloth", "Leestian", "Evil", "Juice", "Azure", "Milk", "Void", "Extract", "Coffee", "Honesty", "Pills", "Mechucos",
-                  "High", "Tea", "Medb", "Starlube", "Mokojing", "Beast", "Feast", "Momus", "Bog", "Spaniel", "Mukusubii", "Chitin-os", "Mulachi", "Giant",
-                  "Fungus", "Neritus", "Berries", "Ngandandari", "Fire", "Opals", "Nguna", "Modern", "Antiques", "Soontill", "Relics", "Njangari", "Saddles",
-                  "Ochoeng", "Chillies", "Orrerian", "Vicious", "Brew", "Giant", "Verrix", "Albino", "Quechua", "Mammoth", "Meat", "Rajukru", "Multi-Stoves",
-                  "Rapa", "Bao", "Snake", "Skins", "Rusani", "Old", "Smokey", "Sanuma", "Decorative", "Meat", "Waters", "of Shintara", "Tanmark", "Tranquil",
-                  "Tea", "Tarach", "Spice", "Terra", "Mater", "Blood", "Bores", "Thrutis", "Cream", "Tiolce", "Waste", "2", "Paste", "Toxandji", "Virocide",
-                  "Uszaian", "Tree", "Grub", "Utgaroar", "Millennial", "Eggs", "Uzumoku", "Low-G", "Wings", "V", "Herculis", "Body", "Rub", "Vanayequi", "Ceratomorpha",
-                  "Fur", "Vega", "Slimweed", "Vidavantian", "Lace", "Volkhab", "Bee", "Drones", "Wheemete", "Wheat", "Cakes", "Witchhaul", "Kobe", "Beef", "Wulpa",
-                  "Hyperbore", "Systems", "Wuthielo", "Ku", "Froth", "Xihe", "Biomorphic", "Companions", "Yaso", "Kondi", "Leaf", "Leathery", "Eggs", "Zeessze",
-                  "Ant", "Grub", "Glue"];
+
+var itemPlaces = ["Tauri", "Aepyornis", "Ceti", "Chateau", "De Aegaeon", "Edan", "Aerial", "Aganippe",
+                   "Rush", "Alacarakmo", "Centauri", "Altairian", "Alya", "Anduliga", "Any Na", "Arouca", "Conventula", "Az", "Cancri",
+                   "Baltha'sine", "Banki", "Bast", "Belalans", "CD-75", "Cherbones", "Chi", "Eridani", "Coquim", "Damna", "Motrona",
+                   "Delta", "Phoenicis", "Deuringas", "Diso", "Eleu", "Indi", "Eranin", "Eshu", "Esuseku", "Ethgreze", "Fujin",
+                   "Geawen", "Pantaa", "Gerasian", "Gueuze", "Goman", "Haidne", "Havasupai", "Hecate", "Heike", "Helvetitj", "HIP 10175",
+                   "HIP", "Burnham", "Holva", "HR 7221", "Irukama", "Jaradharre", "Jaroua", "Jotun", "Kachirigin", "Kamitra", "Kamorin",
+                   "Karetii", "Karsuki", "Kinago", "Kongga", "Koro", "Kung", "Lavian", "Leestian", "Mechucos", "Medb", "Mokojing", "Momus",
+                   "Mukusubii", "Mulachi", "Neritus", "Ngandandari", "Nguna", "Soontill", "Njangari", "Ochoeng", "Orrerian", "Verrix",
+                   "Quechua", "Rajukru", "Multi-Stoves", "Rapa", "Bao", "Rusani", "Sanuma", "Shintara", "Tanmark", "Tarach", "Terra", "Mater",
+                   "Thrutis", "Tiolce", "Toxandji", "Uszaian", "Utgaroar", "Uzumoku", "V Herculis", "Vanayequi", "Vega", "Vidavantian",
+                   "Volkhab", "Wheemete", "Witchhaul", "Wulpa", "Wuthielo", "Ku", "Xihe", "Yaso", "Kondi", "Zeessze", "Yaupon"];
+
+var itemKinds = ["Chimes", "Eggs", "Rabbits", "Apples", "Art", "Gin", "Soup", "Fireworks", "Coffee", "Sweets", "Formula 42", "Krill",
+                  "Leather", "Snakes", "Kittens", "Crystals", "Paste", "Victuals", "Carapaces", "Jelly", "Palms", "Truffles", "Corn",
+                  "Thermals", "Bourbon", "Whiskey", "Umbrellas", "Caviar", "Tea", "Buds", "Dust", "Sticks", "Beer", "Catchers",
+                  "Worms", "Pearls", "Meat", "Proto-Squid", "Bile", "Distillate", "Organophospates", "Blades", "Wheat", "Snails",
+                  "Boxes", "Rice", "Mookah", "Leeches", "Cigars", "Weapons", "Onion Head", "Couture", "Locusts", "Violins", "Ale", "Pellets",
+                  "Brandy", "Cloth", "Juice", "Milk", "Extract", "Pills", "Starlube", "Feast", "Spaniels", "Chitin-os", "Fungus", "Berries",
+                  "Opals", "Antiques", "Relics", "Saddles", "Chillies", "Brew", "Multi-Stoves", "Skins", "Waters", "Spice", "Bores", "Cream",
+                  "Waste", "Virocide", "Eggs", "Wings", "Rub", "Fur", "Slimweed", "Lace", "Drones", "Cakes", "Beef",
+                  "Systems", "Froth", "Companions", "Leaf", "Grubs", "Glue"];
+
+var itemAdjectives = ["Skin", "Mega", "Body", "Fire", "Coffee", "Conventula", "Formula", "Vacuum", "Amphibious", "Snake", "Ray", "Brand",
+                      "Blood", "Marine", "Spongiform", "Experience", "Ma", "Tea", "Dance", "Prayer", "Beer", "Black", "Dream",
+					  "Sea", "Bush", "Distillate", "Duelling", "Wheat", "Giant", "Puzzle", "Filter", "Chameleon", "Evil", "Azure",
+                      "Void", "Honesty", "High", "Beast", "Bog", "Vicious", "Mammoth", "Old", "Tranquil", "Waste 2", "Tree", "Millennial", "Low-G",
+                      "Ceratomorpha", "Bee", "Kobe", "Hyperbore", "Biomorphic", "Leathery", "Ant"];
+
+var itemPrefs = ["Live", "Ceremonial", "Historic", "High", "Modern", "Albino", "Decorative", "Low-G"];
 
 function chooseElement(list) {
     var i = Math.floor(Math.random() * list.length);
@@ -50,15 +58,7 @@ function chooseElement(list) {
 
 function generateStation() {
     var station = "";
-    station += chooseElement(stations);
-    station += " ";
-    station += chooseElement(stations);
-    return station.toUpperCase();
-}
-
-function generateFancyStation() {
-    var station = "";
-    if (Math.random() <= 0.75) {
+    if (Math.random() < 0.80) {
         station += chooseElement(stationProper);
         station += " ";
         station += (Math.random() < 0.50) ? chooseElement(stationOther) : chooseElement(stationType);
@@ -73,19 +73,22 @@ function generateFancyStation() {
 
 function generateItem() {
     var item = "Specializing in ";
-    item += chooseElement(items);
-    item += " ";
-    item += chooseElement(items);
-    if (Math.random() <= 0.30) {
+    if (Math.random() < 0.20) {
+        item += chooseElement(itemPrefs);
         item += " ";
-        item += chooseElement(items);
     }
-
+    item += chooseElement(itemPlaces);
+    item += " ";
+    if (Math.random() < 0.35) {
+        item += chooseElement(itemAdjectives);
+        item += " ";
+    }
+    item += chooseElement(itemKinds);
     return item.toUpperCase();
 }
 
 function generate() {
     $("#rarecontainer").show();
-    $("#station").html(generateFancyStation());
+    $("#station").html(generateStation());
     $("#name").html(generateItem());
 }
