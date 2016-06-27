@@ -2,24 +2,23 @@
     $("#rarecontainer").hide();
 });
 
-var stations = ["Porta", "Glushko", "Station", "Kaufmanis", "Hub", "Schweikart", "Station", "Andrade", "Legacy", "Julian", "Market",
-                  "Weyl", "Gateway", "Hutton", "Orbital", "Solo", "Orbiter", "Malaspina", "Gateway", "Celsius", "Estate", "Libby", "Orbital",
-                  "Shipton", "Orbital", "Fisher", "Station", "Baltha'sine", "Station", "Antonio", "De Andrade", "Vista", "Hart", "Station",
-                  "Boscovich", "Ring", "Kirk", "Dock", "Chalker", "Landing", "Steve", "Masters", "station", "Hirayama", "Installation", "Nemere",
-                  "Market", "Pinzon", "Dock", "Trading", "post", "Shukor", "Hub", "Shifnalport", "Finney", "Dock", "Mansfield", "Orbiter", "Azeban",
-                  "City", "Shajn", "Terminal", "Savinykh", "Orbital", "Bloch", "Station", "Futen", "Spaceport", "Obruchev", "Legacy", "Zamka",
-                  "Platform", "Yurchikhin", "Port", "Gustav", "Sporer", "Port", "Searfoss", "Enterprise", "Lovelace", "Port", "RJH1972", "Brunel",
-                  "City", "Friend", "Orbital", "Stefanyshyn-Piper", "Station", "Andersson", "Station", "Burnham", "Beacon", "Stasheff", "Colony",
-                  "Kreutz", "Orbital", "Veron", "City", "Blaauw", "City", "Gohar", "Station", "Mccool", "City", "Icelock", "Nowak", "Orbital",
-                  "Hammel", "Terminal", "Godwin", "Vision", "Harvestport", "Sinclair", "Platform", "West", "Market", "Fozard", "Ring",
-                  "Laplace", "Ring", "Lonchakov", "Orbital", "Lave", "Station", "Smith", "Reserve", "George", "Lucas", "George", "Lucas",
-                  "Ehrlich", "Orbital", "King", "Gateway", "Brandenstein", "Port", "Vela", "dock", "Noli", "Terminal", "Tartarus", "Point",
-                  "Ledyard", "Dock", "Clark", "Terminal", "Toll", "Ring", "Consolmagno", "Horizons", "Biggle", "Hub", "Cheranovsky", "City",
-                  "Lee", "Hub", "Roddenberry", "Gateway", "Sharon", "Lee", "Free", "Market", "Greeboski's", "Outpost", "Crown", "Ring", "Snyder",
-                  "Terminal", "Flagg", "Gateway", "Fernandes", "Market", "Dunyach", "Gateway", "Jameson", "Memorial", "Cassie-L-Peia", "Tranquillity",
-                  "Gr8minds", "Kingsbury", "Dock", "Gordon", "Terminal", "Tsunenaga", "Orbital", "Guest", "Installation", "Fort", "Klarix", "Sevrdup", "Ring",
-                  "Kaku", "Plant", "Clauss", "Hub", "Taylor", "City", "Lee", "Mines", "Vernadsky", "Dock", "Eisinga", "Enterprise", "Hornby", "Terminal",
-                  "Williams", "Gateway", "Tarter", "Dock", "Zhen", "Dock", "Wheeler", "Market", "Ridley", "Scott", "Nicollier", "Hanger"];
+var stationProper = ["Porta", "Glushko", "Kaufmanis", "Schweikart", "Andrade", "Julian", "Weyl", "Hutton", "Malaspina", "Celsius", "Libby",
+                     "Shipton", "Fisher", "Baltha'sine", "Antonio", "De Andrade", "Hart", "Boscovich", "Kirk", "Chalker", "Steve", "Masters",
+                     "Hirayama", "Nemere", "Pinzon", "Shukor", "Shifnalport", "Finney", "Mansfield", "Azeban", "Shajn", "Savinykh", "Bloch",
+                     "Futen", "Obruchev", "Zamka", "Yurchikhin", "Gustav", "Sporer", "Searfoss", "Lovelace", "RJH1972", "Brunel", "Friend",
+                     "Stefanyshyn-Piper", "Andersson", "Burnham", "Stasheff", "Kreutz", "Veron", "Blaauw", "Gohar", "Mccool", "Nowak",
+                     "Hammel", "Godwin", "Harvestport", "Sinclair", "Fozard", "Laplace", "Lonchakov", "Lave", "Smith", "George", "Lucas",
+                     "Ehrlich", "King", "Brandenstein", "Vela", "Noli", "Tartarus", "Ledyard", "Clark", "Consolmagno", "Biggle", "Cheranovsky",
+                     "Lee", "Roddenberry", "Sharon", "Greeboski", "Snyder", "Flagg", "Fernandes", "Dunyach", "Jameson", "Cassie-L-Peia",
+                     "Gr8minds", "Kingsbury", "Gordon", "Tsunenaga", "Klarix", "Sevrdup", "Kaku", "Clauss", "Taylor", "Vernadsky", "Eisinga",
+                     "Hornby", "Williams", "Tarter", "Zhen", "Wheeler", "Ridley", "Scott", "Nicollier"];
+
+var stationType = ["Station", "Hub", "Gateway", "Estate", "Vista", "Ring", "Dock", "Landing", "Installation", "Port", "Post",
+                   "Terminal", "Spaceport", "Platform", "City", "Beacon", "Colony", "Market", "Reserve", "Point", "Outpost",
+                   "Memorial", "Fort", "Plant", "Mines", "Hanger"];
+
+var stationOther = ["Legacy", "Orbital", "Solo", "Orbiter", "Trading", "Enterprise", "Icelock", "Vision", "West", "Toll", "Horizons",
+                    "Free", "Crown", "Tranquillity", "Guest"];
 
 var items = ["Tauri", "Chimes", "Aepyornis", "Egg", "Ceti", "Rabbits", "Chateau", "De", "Aegaeon", "Edan", "Apples", "of Aerial", "Aganippe",
                   "Rush", "Alacarakmo", "Skin", "Art", "Centauri", "Mega", "Gin", "Altairian", "Skin", "Alya", "Body", "Soup", "Anduliga", "Fire", "Works",
@@ -45,33 +44,48 @@ var items = ["Tauri", "Chimes", "Aepyornis", "Egg", "Ceti", "Rabbits", "Chateau"
                   "Ant", "Grub", "Glue"];
 
 function chooseElement(list) {
-    i = Math.floor(Math.random() * list.length);
+    var i = Math.floor(Math.random() * list.length);
     return list[i];
 }
 
 function generateStation() {
-    station = "";
+    var station = "";
     station += chooseElement(stations);
     station += " ";
     station += chooseElement(stations);
     return station.toUpperCase();
 }
 
+function generateFancyStation() {
+    var station = "";
+    if (Math.random() <= 0.75) {
+        station += chooseElement(stationProper);
+        station += " ";
+        station += (Math.random() < 0.50) ? chooseElement(stationOther) : chooseElement(stationType);
+    }
+    else {
+        station += chooseElement(stationType);
+        station += " ";
+        station += chooseElement(stationProper);
+    }
+    return station.toUpperCase();
+}
+
 function generateItem() {
-    name = "Specializing in ";
-    name += chooseElement(items);
-    name += " ";
-    name += chooseElement(items);
+    var item = "Specializing in ";
+    item += chooseElement(items);
+    item += " ";
+    item += chooseElement(items);
     if (Math.random() <= 0.30) {
-        name += " ";
-        name += chooseElement(items);
+        item += " ";
+        item += chooseElement(items);
     }
 
-    return name.toUpperCase();
+    return item.toUpperCase();
 }
 
 function generate() {
     $("#rarecontainer").show();
-    $("#station").html(generateStation());
+    $("#station").html(generateFancyStation());
     $("#name").html(generateItem());
 }
