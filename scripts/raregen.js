@@ -3,7 +3,7 @@
 });
 
 var stationProper = ["Porta", "Glushko", "Kaufmanis", "Schweikart", "Andrade", "Julian", "Weyl", "Hutton", "Malaspina", "Celsius", "Libby",
-                     "Shipton", "Fisher", "Baltha'sine", "Antonio", "De Andrade", "Hart", "Boscovich", "Kirk", "Chalker", "Steve", "Masters",
+                     "Shipton", "Fisher", "Baltha'sine", "Antonio", "D'Andrade", "Hart", "Boscovich", "Kirk", "Chalker", "Steve", "Masters",
                      "Hirayama", "Nemere", "Pinzon", "Shukor", "Shifnalport", "Finney", "Mansfield", "Azeban", "Shajn", "Savinykh", "Bloch",
                      "Futen", "Obruchev", "Zamka", "Yurchikhin", "Gustav", "Sporer", "Searfoss", "Lovelace", "RJH1972", "Brunel", "Friend",
                      "Stefanyshyn-Piper", "Andersson", "Burnham", "Stasheff", "Kreutz", "Veron", "Blaauw", "Gohar", "Mccool", "Nowak",
@@ -21,16 +21,16 @@ var stationOther = ["Legacy", "Orbital", "Solo", "Orbiter", "Trading", "Enterpri
                     "Free", "Crown", "Tranquillity", "Guest"];
 
 
-var itemPlaces = ["Tauri", "Aepyornis", "Ceti", "Chateau", "De Aegaeon", "Edan", "Aerial", "Aganippe",
-                   "Rush", "Alacarakmo", "Centauri", "Altairian", "Alya", "Anduliga", "Any Na", "Arouca", "Conventula", "Az", "Cancri",
+var itemPlaces = ["Tauri", "Aepyornis", "Ceti", "Chateau", "D'Aegaeon", "Edan", "Aerial", "Aganippe",
+                   "Rush", "Alacarakmo", "Centauri", "Altairian", "Alya", "Anduliga", "Any'Na", "Arouca", "Conventula", "Az", "Cancri",
                    "Baltha'sine", "Banki", "Bast", "Belalans", "CD-75", "Cherbones", "Chi", "Eridani", "Coquim", "Damna", "Motrona",
                    "Delta", "Phoenicis", "Deuringas", "Diso", "Eleu", "Indi", "Eranin", "Eshu", "Esuseku", "Ethgreze", "Fujin",
-                   "Geawen", "Pantaa", "Gerasian", "Gueuze", "Goman", "Haidne", "Havasupai", "Hecate", "Heike", "Helvetitj", "HIP 10175",
-                   "HIP", "Burnham", "Holva", "HR 7221", "Irukama", "Jaradharre", "Jaroua", "Jotun", "Kachirigin", "Kamitra", "Kamorin",
+                   "Geawen", "Pantaa", "Gerasian", "Gueuze", "Goman", "Haidne", "Havasupai", "Hecate", "Heike", "Helvetitj", "HIP-10175",
+                   "HIP", "Burnham", "Holva", "HR-7221", "Irukama", "Jaradharre", "Jaroua", "Jotun", "Kachirigin", "Kamitra", "Kamorin",
                    "Karetii", "Karsuki", "Kinago", "Kongga", "Koro", "Kung", "Lavian", "Leestian", "Mechucos", "Medb", "Mokojing", "Momus",
                    "Mukusubii", "Mulachi", "Neritus", "Ngandandari", "Nguna", "Soontill", "Njangari", "Ochoeng", "Orrerian", "Verrix",
                    "Quechua", "Rajukru", "Rapa", "Bao", "Rusani", "Sanuma", "Shintara", "Tanmark", "Tarach", "Terra", "Mater",
-                   "Thrutis", "Tiolce", "Toxandji", "Uszaian", "Utgaroar", "Uzumoku", "V Herculis", "Vanayequi", "Vega", "Vidavantian",
+                   "Thrutis", "Tiolce", "Toxandji", "Uszaian", "Utgaroar", "Uzumoku", "V-Herculis", "Vanayequi", "Vega", "Vidavantian",
                    "Volkhab", "Wheemete", "Witchhaul", "Wulpa", "Wuthielo", "Ku", "Xihe", "Yaso", "Kondi", "Zeessze", "Yaupon"];
 
 var itemKinds = ["Chimes", "Eggs", "Rabbits", "Apples", "Art", "Gin", "Soup", "Fireworks", "Coffee", "Sweets", "Formula 42", "Krill",
