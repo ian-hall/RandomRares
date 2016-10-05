@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $("#rarecontainer").hide();
+    $("#purchaseBtn").html("REQUEST DOCKING");
 });
 
 var stationProper = ["Porta", "Glushko", "Kaufmanis", "Schweikart", "Andrade", "Julian", "Weyl", "Hutton", "Malaspina", "Celsius", "Libby",
@@ -105,6 +106,7 @@ function generateItem() {
 }
 
 function generate() {
+    $("#purchaseBtn").html("PURCHASE GOODS");
     $("#rarecontainer").show();
     $("#station").html(generateStation());
     $("#name").html(generateItem());
