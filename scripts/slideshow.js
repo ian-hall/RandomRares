@@ -7,8 +7,8 @@
                        'http://i.imgur.com/m0nS7Kc.jpg', 'http://i.imgur.com/b58muh8.jpg', 'http://i.imgur.com/Az6EOhB.jpg',
                        'http://i.imgur.com/ja2qlE1.jpg', 'http://i.imgur.com/YX0YZ6V.jpg', 'http://i.imgur.com/fOZWUn6.jpg', 'http://i.imgur.com/cmcTxRa.jpg',
                        'http://i.imgur.com/lACmD3J.jpg', 'http://i.imgur.com/MppnHBl.jpg', 'http://i.imgur.com/gm1TDtn.jpg', 'http://i.imgur.com/0aEN1ii.jpg',
-                       'http://i.imgur.com/nK936XZ.jpg', 'http://i.imgur.com/8qmB87x.jpg', 'http://i.imgur.com/ZskDU7m.jpg'];
-    var wait = 7500
+                       'http://i.imgur.com/8qmB87x.jpg', 'http://i.imgur.com/ZskDU7m.jpg'];
+    var wait = 15000
     function chooseElement(list) {
         i = Math.floor(Math.random() * list.length);
         return list[i];
