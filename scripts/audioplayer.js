@@ -18,6 +18,8 @@ var stopClick = function () {
 }
 playbtn.addEventListener("click", playClick, false);
 stopbtn.addEventListener("click", stopClick, false);
+playbtn.addEventListener("touchend", playClick, false);
+stopbtn.addEventListener("touchend", stopClick, false);
 
 function playSoma() {
     var curSrc = soma.src;
