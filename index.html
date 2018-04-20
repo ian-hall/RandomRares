@@ -1,92 +1,91 @@
 ﻿<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/lux219.css">
-        <link rel="stylesheet" href="stylesheets/raressite.css">
-        <link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=u8tuc0fwqi" type="image/x-icon" /> 
-        <title>rare goods</title>
-    </head>
-    <body class="rarebg">
-        <!--<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand text-primary" href="http://www.imhall.com">{imhall.com}</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav text-primary">
-                        <a class="nav-item nav-link text-primary" href="projects.html">projects</a>
-                        <a class="nav-item nav-link text-primary" href="/RandomRares/">Elite Rares</a>
-                    </div>
-                </div>
-            </div>
-        </nav>-->
-        <nav class="navbar fixed-top transparent">
-            <a class="navbar-brand" href="/">
-                <img class="brand-image" alt="Brand" src="images/home.png">
-            </a>
-        </nav>
-        <div class="container body-content">
-            <div id="rarecontainer">
-                <div class="row">
-                    <div class="col-md-offset-3 col-md-6">
-                        <div class="card bg-dark semi-transparent">
-                            <div class="card-heading"><h2>WELCOME TO</h2></div>
-                            <div class="card-body"><h2 class="station-name" id="station"></h2></div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/lux219.css">
+    <link rel="stylesheet" href="stylesheets/raressite.css">
+    <link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=u8tuc0fwqi" type="image/x-icon" />
+    <title>rare goods</title>
+</head>
+<body class="rarebg">
+    <nav class="navbar fixed-top transparent">
+        <a class="navbar-brand" href="/">
+            <img class="brand-image" alt="Brand" src="images/home.png">
+        </a>
+    </nav>
+    <div class="container body-content">
+        <div id="rarecontainer">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card card-secondary semi-transparent">
+                        <div class="card-header bg-dark">
+                            <h2 class="text-info">WELCOME TO</h2>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="station-name" id="station"></h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-offset-3 col-md-6">
-                        <h2 class="text-info" id="name"></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-offset-3 col-md-6">
-                    <button class="btn btn-info btn-block" onClick="generate()" id="purchaseBtn"></button>
-                </div>
             </div>
         </div>
-        <div class="above-footer">
+        <br />
+        <div class="row">
+            <div class="col-md-3"></div>
             <div class="col-md-6">
-                <div class="col-md-3">
-                    <p class="text-info">
-                        <a href="http://somafm.com">SomaFM</a> Mission Control
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <audio id="somafm" preload="none" src=""></audio>
-                    <div class="btn-group btn-group" role="group">
-                        <button class="btn btn-info" onclick="playSoma()">Play</button>
-                        <button class="btn btn-info" onclick="stopSoma()">Stop</button>
-                    </div>
-                </div>
+                <h2 class="text-info" id="name"></h2>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info btn-block btn-sm" onClick="generate()" id="purchaseBtn"></button>
+            </div>
+        </div>
+    </div>
+    <div class="above-footer">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-md-5">
                 <div class="row">
-                    <div clas="col-sm-12">
-                        <p class="text-footer">
-                            <ul class="list-inline">
-                                <li class="text-primary pull-left">
-                                    &copy; 2018 - <a href="https://www.twitter.com/RandomRares">CMDR Ivanil</a><a href="http://www.github.com/ian-hall"><img src="images/blacktocat.png" /></a>
-                                </li>
-                                <li class="text-primary pull-right">
-                                    <a href="https://www.elitedangerous.com/">Elite Dangerous</a> &copy; 1984 - 2018 <a href="http://www.frontier.co.uk/">Frontier Developments Plc</a>
-                                </li>
-                            </ul>
+                    <div class="col-3">
+                        <p class="text-info">
+                            <a href="http://somafm.com">SomaFM</a> Mission Control
                         </p>
                     </div>
+                    <div class="col-3">
+                        <audio id="somafm" preload="none" src=""></audio>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button class="btn btn-sm btn-outline-info semi-transparent" onclick="playSoma()">Play</button>
+                            <button class="btn btn-sm btn-outline-info semi-transparent" onclick="stopSoma()">Stop</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <script src="scripts/slideshow.js"></script>
-        <script src="scripts/raregen.js"></script>
-        <script src="scripts/audioplayer.js"></script>
-    </body>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-footer">
+                        <ul class="list-inline">
+                            <li class="list-inline-item text-primary pull-left">
+                                &copy; 2018 - <a href="https://www.twitter.com/RandomRares">CMDR Ivanil</a><a href="http://www.github.com/ian-hall"><img src="images/blacktocat.png" /></a>
+                            </li>
+                            <li class="list-inline-item text-primary pull-right">
+                                <a href="https://www.elitedangerous.com/">Elite Dangerous</a> &copy; 1984 - 2018 <a href="http://www.frontier.co.uk/">Frontier Developments Plc</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/raregen.js"></script>
+    <script src="scripts/audioplayer.js"></script>
+</body>
 </html>
