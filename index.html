@@ -7,9 +7,9 @@
     <title>rare goods</title>
 </head>
 <body class="rarebg">
-    <nav class="navbar fixed-top transparent">
+    <nav class="navbar navbar-light fixed-top transparent">
         <a class="navbar-brand" href="/">
-            <img class="brand-image" alt="Brand" src="images/home.png">
+            <img class="brand-image" src="images/home.png" alt="">
         </a>
     </nav>
     <div class="container body-content">
@@ -45,18 +45,22 @@
     <div class="above-footer">
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-md-5">
+            <div class="col-md-2">
                 <div class="row">
-                    <div class="col-3">
-                        <p class="text-info">
-                            <a href="http://somafm.com">SomaFM</a> Mission Control
-                        </p>
-                    </div>
-                    <div class="col-3">
-                        <audio id="somafm" preload="none" src=""></audio>
-                        <div class="btn-group btn-group-sm" role="group">
-                            <button class="btn btn-sm btn-outline-info semi-transparent" onclick="playSoma()">Play</button>
-                            <button class="btn btn-sm btn-outline-info semi-transparent" onclick="stopSoma()">Stop</button>
+                    <div class="col-12">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="p-2">
+                                <p class="text-info">
+                                    <a href="http://somafm.com">SomaFM</a> Mission Control
+                                </p>
+                            </div>
+                            <div class="p-2">
+                                <audio id="somafm" preload="none" src=""></audio>
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button class="btn btn-sm btn-outline-info semi-transparent" onclick="playSoma()">Play</button>
+                                    <button class="btn btn-sm btn-outline-info semi-transparent" onclick="stopSoma()">Stop</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,16 +71,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-footer">
-                        <ul class="list-inline">
-                            <li class="list-inline-item text-primary pull-left">
-                                &copy; 2018 - <a href="https://www.twitter.com/RandomRares">CMDR Ivanil</a><a href="http://www.github.com/ian-hall"><img src="images/blacktocat.png" /></a>
-                            </li>
-                            <li class="list-inline-item text-primary pull-right">
-                                <a href="https://www.elitedangerous.com/">Elite Dangerous</a> &copy; 1984 - 2018 <a href="http://www.frontier.co.uk/">Frontier Developments Plc</a>
-                            </li>
-                        </ul>
-                    </p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="p-2">
+                            &copy; 2018 - <a href="https://www.twitter.com/RandomRares">CMDR Ivanil</a><a href="http://www.github.com/ian-hall"><img src="images/blacktocat.png" /></a>
+                        </div>
+                        <div class="p-2">
+                            <a href="https://www.elitedangerous.com/">Elite Dangerous</a> &copy; 1984 - 2018 <a href="http://www.frontier.co.uk/">Frontier Developments Plc</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

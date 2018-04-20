@@ -5,7 +5,7 @@
 
 body {
     padding-top:115px;
-    padding-bottom: 500px;
+    padding-bottom: 115px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -33,14 +33,14 @@ textarea {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 95px;
+  height: 90px;
   background-color: #1a1a1a;
 }
 
 .above-footer {
   position: absolute;
   width: 100%;
-  bottom: 100px;
+  bottom: 95px;
 }
 
 .footer > .container {
@@ -86,7 +86,7 @@ body.rarebg {
 
 .brand-image{
     width:auto;
-    height:35px;
+    height:40px;
 }
 
 .station-name{
