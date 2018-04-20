@@ -3,31 +3,25 @@ var playbtn = document.getElementById("somaplay");
 var stopbtn = document.getElementById("somastop");
 var somasrc = "http://ice1.somafm.com/missioncontrol-128-mp3";
 soma.volume = 0.45;
-var playClick = function () {
-    var curSrc = soma.src;
-    if (curSrc != somasrc) {
-        soma.src = somasrc;
-        soma.load();
-        soma.play();
-    }
-}
-var stopClick = function () {
-    soma.pause();
-    soma.src = "";
-    soma.load();
-}
-playbtn.addEventListener("click", playClick, false);
-stopbtn.addEventListener("click", stopClick, false);
-playbtn.addEventListener("touchend", playClick, false);
-stopbtn.addEventListener("touchend", stopClick, false);
+
+//var playclick = function () {
+//    soma.load();
+//    soma.play();
+//}
+//var stopclick = function () {
+//    soma.pause();
+//    soma.src = "";
+//    soma.load();
+//}
+//playbtn.addeventlistener("click", playclick, false);
+//stopbtn.addeventlistener("click", stopclick, false);
+//playbtn.addeventlistener("touchend", playclick, false);
+//stopbtn.addeventlistener("touchend", stopclick, false);
 
 function playSoma() {
-    var curSrc = soma.src;
-    if (curSrc != somasrc) {
-        soma.src = somasrc;
-        soma.load();
-        soma.play();
-    }
+    soma.src = somasrc;
+    soma.load();
+    soma.play();
 };
 
 function stopSoma() {
