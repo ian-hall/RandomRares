@@ -5,7 +5,7 @@
 
 body {
     padding-top:115px;
-    padding-bottom: 115px;
+    padding-bottom: 155px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -33,14 +33,14 @@ textarea {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 90px;
+  height: 75px;
   background-color: #1a1a1a;
 }
 
 .above-footer {
   position: absolute;
   width: 100%;
-  bottom: 95px;
+  bottom: 80px;
 }
 
 .footer > .container {
