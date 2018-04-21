@@ -57,9 +57,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Player controls">
-                            <audio id="somafm" preload="none" src="http://ice1.somafm.com/missioncontrol-128-mp3"></audio>
-                            <button id="somaplay" class="btn btn-outline-info semi-transparent" onclick="playSoma()">Play</button>
-                            <button id="somastop" class="btn btn-outline-info semi-transparent" onclick="stopSoma()">Stop</button>
+                            <audio id="somafm" preload="none">
+                                <source  src="http://ice1.somafm.com/missioncontrol-128-mp3" type="audio/mp3"/>
+                            </audio>
+                            <input type="button" id="somaplay" class="btn btn-outline-info semi-transparent" onclick="playSoma()" value="Play" />
+                            <input type="button" id="somastop" class="btn btn-outline-info semi-transparent" onclick="stopSoma()" value="Stop" />
                         </div>
                     </div>
                 </div>
